@@ -28,7 +28,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 
         private void RegBt_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RegistrationPage());
+            NavigationService.Navigate(new TournamentListPage());
         }
 
 
@@ -39,7 +39,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
                 Player user = App.db.Player.FirstOrDefault(x => x.Login == LoginTb.Text && x.Password == PasswordPb.Password);
                 if (user != null)
                 {
-                    NavigationService.Navigate(new TornnamentListPage());
+                    NavigationService.Navigate(new TournamentListPage());
                     App.UserType = "Участник";
                     MessageBox.Show("Вы успешно вошли!");
                 }
@@ -59,7 +59,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
                 Organizer user = App.db.Organizer.FirstOrDefault(x => x.Login == LoginTb.Text && x.Password == PasswordPb.Password);
                 if (user != null)
                 {
-                    NavigationService.Navigate(new TornnamentListPage());
+                    NavigationService.Navigate(new TournamentListPage());
                     App.UserType = "Организатор";
                     MessageBox.Show("Вы успешно вошли!");
                 }

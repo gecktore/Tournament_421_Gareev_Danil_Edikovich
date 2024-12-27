@@ -19,9 +19,9 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
     /// <summary>
     /// Логика взаимодействия для TornnamentListPage.xaml
     /// </summary>
-    public partial class TornnamentListPage : Page
+    public partial class TournamentListPage : Page
     {
-        public TornnamentListPage()
+        public TournamentListPage()
         {
             InitializeComponent();
             TournamentLV.ItemsSource = App.db.Tournament.ToList();
@@ -74,9 +74,13 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 
         private void DelBt_Click(object sender, RoutedEventArgs e)
         {
-            var selItem = TournamentLV.SelectedItem as Tournament;
-            App.db.Tournament.Remove(selItem);
-            App.db.SaveChanges();
+            try
+            {
+                var selItem = TournamentLV.SelectedItem as Tournament;
+                App.db.Tournament.Remove(selItem);
+                App.db.SaveChanges();
+            }
+            catch { }
         }
     }
 }

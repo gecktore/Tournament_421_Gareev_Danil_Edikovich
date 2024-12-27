@@ -36,7 +36,7 @@
           <Key>
             <PropertyRef Name="OrganizerID" />
           </Key>
-          <Property Name="OrganizerID" Type="int" Nullable="false" />
+          <Property Name="OrganizerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Initial" Type="nchar" MaxLength="10" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
@@ -112,7 +112,7 @@
           <Key>
             <PropertyRef Name="TournamentID" />
           </Key>
-          <Property Name="TournamentID" Type="int" Nullable="false" />
+          <Property Name="TournamentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date" Type="date" />
           <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
           <Property Name="TimeOut" Type="nvarchar" MaxLength="50" />
@@ -388,7 +388,7 @@
           <Key>
             <PropertyRef Name="OrganizerID" />
           </Key>
-          <Property Name="OrganizerID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Initial" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -476,7 +476,7 @@
           <Key>
             <PropertyRef Name="TournamentID" />
           </Key>
-          <Property Name="TournamentID" Type="Int32" Nullable="false" />
+          <Property Name="TournamentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TimeOut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -651,7 +651,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TournamentDB_421_Gareev_Danil_EdikovichEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TournamentDB_421_Gareev_Danil_EdikovichEntities5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Game" EntityType="Self.Game" />
           <EntitySet Name="Match" EntityType="Self.Match" />
           <EntitySet Name="MatchTeam" EntityType="Self.MatchTeam" />
@@ -721,7 +721,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище TournamentDB_421_Gareev_Danil_EdikovichModelContainer" CdmEntityContainer="TournamentDB_421_Gareev_Danil_EdikovichEntities4">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TournamentDB_421_Gareev_Danil_EdikovichModelContainer" CdmEntityContainer="TournamentDB_421_Gareev_Danil_EdikovichEntities5">
           <EntitySetMapping Name="Game">
             <EntityTypeMapping TypeName="TournamentDB_421_Gareev_Danil_EdikovichModel.Game">
               <MappingFragment StoreEntitySet="Game">

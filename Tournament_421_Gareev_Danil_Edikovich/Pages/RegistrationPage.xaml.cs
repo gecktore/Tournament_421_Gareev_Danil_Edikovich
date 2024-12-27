@@ -36,6 +36,8 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
         private void SaveBt_Click(object sender, RoutedEventArgs e)
         {
             App.db.Organizer.Add(new Organizer { Login = LoginTb.Text, Password = PasswordPb.Text });
+            App.db.SaveChanges();
+            NavigationService.Navigate(new NavigationPage());
         }
     }
 }
