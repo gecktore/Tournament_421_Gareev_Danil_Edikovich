@@ -14,7 +14,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich
     /// </summary>
     public partial class App : Application
     {
-        public static TournamentDB_421_Gareev_Danil_EdikovichEntities2 db = new TournamentDB_421_Gareev_Danil_EdikovichEntities2();
+        public static TournamentDB_421_Gareev_Danil_EdikovichEntities3 db = new TournamentDB_421_Gareev_Danil_EdikovichEntities3();
         public static string UserType;
     }
 }

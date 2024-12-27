@@ -13,10 +13,10 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Components
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TournamentDB_421_Gareev_Danil_EdikovichEntities2 : DbContext
+    public partial class TournamentDB_421_Gareev_Danil_EdikovichEntities3 : DbContext
     {
-        public TournamentDB_421_Gareev_Danil_EdikovichEntities2()
-            : base("name=TournamentDB_421_Gareev_Danil_EdikovichEntities2")
+        public TournamentDB_421_Gareev_Danil_EdikovichEntities3()
+            : base("name=TournamentDB_421_Gareev_Danil_EdikovichEntities3")
         {
         }
     

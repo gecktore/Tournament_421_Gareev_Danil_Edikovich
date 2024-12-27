@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Gareev_Danil_Edikovich.Components;
 
 namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {
@@ -20,9 +21,12 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
     /// </summary>
     public partial class AddEditTournamentPage : Page
     {
-        public AddEditTournamentPage()
+        Tournament tournament;
+        public AddEditTournamentPage(Tournament _tournament)
         {
             InitializeComponent();
+            tournament = _tournament;
+            this.DataContext = tournament;
         }
     }
 }
