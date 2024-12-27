@@ -23,6 +23,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
         public TornnamentListPage()
         {
             InitializeComponent();
+            TournamentLV.ItemsSource = App.db.Tournament.ToList();
         }
     }
 }

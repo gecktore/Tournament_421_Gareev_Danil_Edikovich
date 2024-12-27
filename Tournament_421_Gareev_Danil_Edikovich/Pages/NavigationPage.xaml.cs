@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Gareev_Danil_Edikovich.Components;
 
 namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {
@@ -27,7 +28,48 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 
         private void RegBt_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new TornnamentListPage());
+        }
 
+
+        private void PlayerEnterBt_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Player user = App.db.Player.FirstOrDefault(x => x.Login == LoginTb.Text && x.Password == PasswordPb.Password);
+                if (user != null)
+                {
+                    NavigationService.Navigate(new TornnamentListPage());
+                    App.UserType = "Участник";
+                    MessageBox.Show("Вы успешно вошли!");
+                }
+                else
+                    MessageBox.Show("Неверный пароль или логин!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка");
+            }
+        }
+
+        private void OrganizerEnterBt_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Organizer user = App.db.Organizer.FirstOrDefault(x => x.Login == LoginTb.Text && x.Password == PasswordPb.Password);
+                if (user != null)
+                {
+                    NavigationService.Navigate(new TornnamentListPage());
+                    App.UserType = "Организатор";
+                    MessageBox.Show("Вы успешно вошли!");
+                }
+                else
+                    MessageBox.Show("Неверный пароль или логин!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка");
+            }
         }
     }
 }

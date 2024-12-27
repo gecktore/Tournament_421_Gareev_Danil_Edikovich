@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tournament_421_Gareev_Danil_Edikovich.Pages;
 
-namespace Tournament_421_Gareev_Danil_Edikovich
+namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddEditTournamentPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddEditTournamentPage : Page
     {
-        public MainWindow()
+        public AddEditTournamentPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new NavigationPage());
         }
     }
 }

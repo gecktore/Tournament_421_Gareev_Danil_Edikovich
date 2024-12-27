@@ -14,10 +14,11 @@
             <TextBlock>Логин</TextBlock>
             <TextBox x:Name="LoginTb"/>
             <TextBlock>Пароль</TextBlock>
-            <PasswordBox x:Name="PassPb"></PasswordBox>
-            <Button Margin="5" x:Name="EnterBt" Content="Войти" Click="EnterBt_Click"/>
+            <PasswordBox x:Name="PasswordPb"></PasswordBox>
+            <Button Margin="5" x:Name="PlayerEnterBt" Content="Войти как участник" Click="PlayerEnterBt_Click"/>
+            <Button Margin="5" x:Name="OrganizerEnterBt" Content="Войти как организатор" Click="OrganizerEnterBt_Click"/>
             <Button Margin="5" x:Name="RegBt" Content="Регистрация" Click="RegBt_Click"/>
-            <Button Margin="5" x:Name="ViewerBt" Content="Продоолжить как зритель" Click="RegBt_Click"/>
+            <Button Margin="5" x:Name="ViewerBt" Content="Продолжить как зритель" Click="RegBt_Click"/>
         </StackPanel>
     </Grid>
 </Page>

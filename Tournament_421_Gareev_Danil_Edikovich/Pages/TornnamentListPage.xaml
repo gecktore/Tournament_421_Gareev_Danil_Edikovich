@@ -17,12 +17,12 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
             <StackPanel Margin="10">
-                <TextBlock Text="Вид:" FontWeight="Bold"/>
-                <ComboBox x:Name="TypeCb" Width="120" SelectionChanged="TypeCb_SelectionChanged" Margin="0,5,0,0"/>
+                <TextBlock Text="Статус:" FontWeight="Bold"/>
+                <ComboBox x:Name="StatusCb" Width="120" Margin="0,5,0,0" SelectionChanged="StatusCb_SelectionChanged"/>
             </StackPanel>
             <StackPanel Margin="10">
                 <TextBlock Text="Поиск:" FontWeight="Bold"/>
-                <TextBox x:Name="SearchTb" Height="30" Width="120" TextChanged="SearchTb_TextChanged" Margin="0,5,0,0"/>
+                <TextBox x:Name="SearchTb" Height="30" Width="120" Margin="0,5,0,0" TextChanged="SearchTb_TextChanged"/>
             </StackPanel>
         </StackPanel>
 
@@ -30,23 +30,19 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Название" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Width="100" Header="Тип" DisplayMemberBinding="{Binding CompType.Title}"/>
-                    <GridViewColumn Width="100" Header="Размер" DisplayMemberBinding="{Binding DronType.Title}"/>
-                    <GridViewColumn Width="100" Header="Фото">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Image Height="60" Width="60" Source="{Binding ImageBin}" Stretch="Uniform"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Width="250" Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Width="100" Header="Дата" DisplayMemberBinding="{Binding CompType.Title}"/>
+                    <GridViewColumn Width="100" Header="Время начала" DisplayMemberBinding="{Binding DronType.Title}"/>
+                    <GridViewColumn Width="100" Header="Игра" DisplayMemberBinding="{Binding ads}"/>
+                    <GridViewColumn Width="100" Header="Формат" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Width="100" Header="Количество участников" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Width="100" Header="Призовой фонд" DisplayMemberBinding="{Binding Description}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="20">
-            <Button x:Name="AddBt" Content="Добавить" Width="120" Height="40" FontSize="16" Click="AddBt_Click" Margin="0,10,10,0"/>
-            <Button x:Name="DelBt" Content="Удалить" Width="120" Height="40" FontSize="16" Background="Red" Foreground="White" Click="DelBt_Click" Margin="0,10,10,0"/>
+            <Button x:Name="AddBt" Content="Добавить" Width="120" Height="40" FontSize="16" Margin="0,10,10,0"/>
+            <Button x:Name="DelBt" Content="Удалить" Width="120" Height="40" FontSize="16" Background="Red" Foreground="White" Margin="0,10,10,0"/>
         </StackPanel>
     </Grid>
 </Page>
