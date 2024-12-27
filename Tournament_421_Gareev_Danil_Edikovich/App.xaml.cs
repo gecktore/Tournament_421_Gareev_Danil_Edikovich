@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using Tournament_421_Gareev_Danil_Edikovich.Components;
+using Tournament_421_Gareev_Danil_Edikovich.Database;
 
 namespace Tournament_421_Gareev_Danil_Edikovich
 {
@@ -14,7 +14,7 @@ namespace Tournament_421_Gareev_Danil_Edikovich
     /// </summary>
     public partial class App : Application
     {
-        public static TournamentDB_421_Gareev_Danil_EdikovichEntities3 db = new TournamentDB_421_Gareev_Danil_EdikovichEntities3();
+        public static TournamentDB_421_Gareev_Danil_EdikovichEntities4 db = new TournamentDB_421_Gareev_Danil_EdikovichEntities4();
         public static string UserType;
     }
 }

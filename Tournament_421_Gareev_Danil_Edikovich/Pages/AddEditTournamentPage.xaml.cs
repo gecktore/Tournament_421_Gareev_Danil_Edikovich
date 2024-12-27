@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tournament_421_Gareev_Danil_Edikovich.Components;
+using Tournament_421_Gareev_Danil_Edikovich.Database;
 
 namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {

@@ -121,7 +121,7 @@
           <Property Name="PlayFormatID" Type="int" />
           <Property Name="PrizePool" Type="nvarchar" MaxLength="50" />
           <Property Name="GameID" Type="int" />
-          <Property Name="Name" Type="nchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
@@ -485,7 +485,7 @@
           <Property Name="PlayFormatID" Type="Int32" />
           <Property Name="PrizePool" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GameID" Type="Int32" />
-          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Game" Relationship="Self.FK_Tournament_Game" FromRole="Tournament" ToRole="Game" />
           <NavigationProperty Name="Match" Relationship="Self.FK_Match_Tournament" FromRole="Tournament" ToRole="Match" />
           <NavigationProperty Name="PlayFormat" Relationship="Self.FK_Tournament_PlayFormat" FromRole="Tournament" ToRole="PlayFormat" />
@@ -651,7 +651,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TournamentDB_421_Gareev_Danil_EdikovichEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TournamentDB_421_Gareev_Danil_EdikovichEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Game" EntityType="Self.Game" />
           <EntitySet Name="Match" EntityType="Self.Match" />
           <EntitySet Name="MatchTeam" EntityType="Self.MatchTeam" />
@@ -721,7 +721,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище TournamentDB_421_Gareev_Danil_EdikovichModelContainer" CdmEntityContainer="TournamentDB_421_Gareev_Danil_EdikovichEntities3">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TournamentDB_421_Gareev_Danil_EdikovichModelContainer" CdmEntityContainer="TournamentDB_421_Gareev_Danil_EdikovichEntities4">
           <EntitySetMapping Name="Game">
             <EntityTypeMapping TypeName="TournamentDB_421_Gareev_Danil_EdikovichModel.Game">
               <MappingFragment StoreEntitySet="Game">

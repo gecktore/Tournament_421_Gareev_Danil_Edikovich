@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Collections.Generic;

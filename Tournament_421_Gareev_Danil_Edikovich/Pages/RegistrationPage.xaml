@@ -9,6 +9,15 @@
       Title="RegistrationPage">
 
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <TextBlock FontSize="30" Text="Регистрация"/>
+            <TextBlock Text="Логин"/>
+            <TextBox x:Name="LoginTb" Text="{Binding Login}" MaxLength="50" />
+            <TextBlock Text="Пароль"/>
+            <TextBox x:Name="PasswordPb" Text="{Binding Password}" MaxLength="50" />
+            <CheckBox x:Name="UserTypeChb" Content="Участник (если не выбрано - организатор )"/>
+            <Button x:Name="SaveBt" Content="Сохранить" Click="SaveBt_Click"/>
+            <Button x:Name="ExitBt" Content="Выйти" Click="ExitBt_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

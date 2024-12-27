@@ -7,26 +7,35 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Team
+    public partial class Tournament
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Team()
+        public Tournament()
         {
-            this.MatchTeam = new HashSet<MatchTeam>();
-            this.PlayerTeam = new HashSet<PlayerTeam>();
+            this.Match = new HashSet<Match>();
         }
     
-        public int TeamID { get; set; }
-        public string TeamName { get; set; }
+        public int TournamentID { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public string TimeIn { get; set; }
+        public string TimeOut { get; set; }
+        public Nullable<int> TypeID { get; set; }
+        public Nullable<int> StatusID { get; set; }
+        public Nullable<int> PlayFormatID { get; set; }
+        public string PrizePool { get; set; }
+        public Nullable<int> GameID { get; set; }
+        public string Name { get; set; }
     
+        public virtual Game Game { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MatchTeam> MatchTeam { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlayerTeam> PlayerTeam { get; set; }
+        public virtual ICollection<Match> Match { get; set; }
+        public virtual PlayFormat PlayFormat { get; set; }
+        public virtual Status Status { get; set; }
+        public virtual Type Type { get; set; }
     }
 }

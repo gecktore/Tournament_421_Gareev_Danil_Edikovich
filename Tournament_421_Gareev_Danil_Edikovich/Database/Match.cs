@@ -7,23 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Role
+    public partial class Match
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Role()
+        public Match()
         {
-            this.PlayerTeam = new HashSet<PlayerTeam>();
+            this.MatchTeam = new HashSet<MatchTeam>();
+            this.PlayerMatch = new HashSet<PlayerMatch>();
         }
     
-        public int RoleID { get; set; }
-        public string Title { get; set; }
+        public int MatchID { get; set; }
+        public Nullable<int> TournamentID { get; set; }
+        public string StartIn { get; set; }
+        public string StartOut { get; set; }
+        public Nullable<int> WinnerID { get; set; }
+        public string Score { get; set; }
     
+        public virtual Tournament Tournament { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlayerTeam> PlayerTeam { get; set; }
+        public virtual ICollection<MatchTeam> MatchTeam { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PlayerMatch> PlayerMatch { get; set; }
     }
 }

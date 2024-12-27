@@ -29,20 +29,20 @@
         <ListView x:Name="TournamentLV" Grid.Row="1" Margin="20" Background="White" BorderThickness="1" BorderBrush="#CCCCCC">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="150" Header="Название" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Width="100" Header="Дата" DisplayMemberBinding="{Binding CompType.Title}"/>
-                    <GridViewColumn Width="100" Header="Время начала" DisplayMemberBinding="{Binding DronType.Title}"/>
-                    <GridViewColumn Width="100" Header="Игра" DisplayMemberBinding="{Binding ads}"/>
-                    <GridViewColumn Width="100" Header="Формат" DisplayMemberBinding="{Binding Description}"/>
-                    <GridViewColumn Width="100" Header="Количество участников" DisplayMemberBinding="{Binding Description}"/>
-                    <GridViewColumn Width="100" Header="Призовой фонд" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Width="150" Header="Название" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="100" Header="Дата" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Width="100" Header="Время начала" DisplayMemberBinding="{Binding TimeIn}"/>
+                    <GridViewColumn Width="100" Header="Игра" DisplayMemberBinding="{Binding Game.Title}"/>
+                    <GridViewColumn Width="100" Header="Формат" DisplayMemberBinding="{Binding PlayFormat.Title}"/>
+                    <GridViewColumn Width="100" Header="Количество участников"/>
+                    <GridViewColumn Width="100" Header="Призовой фонд" DisplayMemberBinding="{Binding PrizePool}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="20">
-            <Button x:Name="AddBt" Content="Добавить" Width="120" Height="40" FontSize="16" Margin="0,10,10,0"/>
-            <Button x:Name="DelBt" Content="Удалить" Width="120" Height="40" FontSize="16" Background="Red" Foreground="White" Margin="0,10,10,0"/>
+            <Button x:Name="AddBt" Content="Добавить" Width="120" Height="40" FontSize="16" Margin="0,10,10,0" Click="AddBt_Click"/>
+            <Button x:Name="DelBt" Content="Удалить" Width="120" Height="40" FontSize="16" Background="Red" Foreground="White" Margin="0,10,10,0" Click="DelBt_Click"/>
         </StackPanel>
     </Grid>
 </Page>

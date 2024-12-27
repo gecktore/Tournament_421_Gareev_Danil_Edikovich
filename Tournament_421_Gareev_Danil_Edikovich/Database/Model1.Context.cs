@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TournamentDB_421_Gareev_Danil_EdikovichEntities3 : DbContext
+    public partial class TournamentDB_421_Gareev_Danil_EdikovichEntities4 : DbContext
     {
-        public TournamentDB_421_Gareev_Danil_EdikovichEntities3()
-            : base("name=TournamentDB_421_Gareev_Danil_EdikovichEntities3")
+        public TournamentDB_421_Gareev_Danil_EdikovichEntities4()
+            : base("name=TournamentDB_421_Gareev_Danil_EdikovichEntities4")
         {
         }
     

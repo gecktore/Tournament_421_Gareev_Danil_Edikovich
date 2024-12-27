@@ -7,14 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Viewer
+    public partial class MatchTeam
     {
-        public int ViewerID { get; set; }
-        public string Title { get; set; }
+        public int MatchTeamID { get; set; }
+        public Nullable<int> TeamID { get; set; }
+        public Nullable<int> MatchID { get; set; }
+        public string TimeStamp { get; set; }
+    
+        public virtual Match Match { get; set; }
+        public virtual Team Team { get; set; }
     }
 }

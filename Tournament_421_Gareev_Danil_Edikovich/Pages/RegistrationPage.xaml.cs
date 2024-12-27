@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Gareev_Danil_Edikovich.Database;
 
 namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {
@@ -20,9 +21,21 @@ namespace Tournament_421_Gareev_Danil_Edikovich.Pages
     /// </summary>
     public partial class RegistrationPage : Page
     {
+        Organizer organizer;
         public RegistrationPage()
         {
             InitializeComponent();
+            this.DataContext = this;
+        }
+
+        private void ExitBt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void SaveBt_Click(object sender, RoutedEventArgs e)
+        {
+            App.db.Organizer.Add(new Organizer { Login = LoginTb.Text, Password = PasswordPb.Text });
         }
     }
 }

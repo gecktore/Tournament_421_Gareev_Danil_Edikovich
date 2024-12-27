@@ -7,23 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tournament_421_Gareev_Danil_Edikovich.Components
+namespace Tournament_421_Gareev_Danil_Edikovich.Database
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Type
+    public partial class Organizer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Type()
-        {
-            this.Tournament = new HashSet<Tournament>();
-        }
-    
-        public int TypeID { get; set; }
-        public string Title { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tournament> Tournament { get; set; }
+        public int OrganizerID { get; set; }
+        public string Initial { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }
