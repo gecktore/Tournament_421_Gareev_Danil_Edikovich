@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="203632ec7fd74416a8796d302fe6565b" Name="Diagram1">
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Game" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Match" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.MatchTeam" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Organizer" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Player" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.PlayerMatch" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.PlayerTeam" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.PlayFormat" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Role" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Status" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Team" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Tournament" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Type" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Gareev_Danil_EdikovichModel.Viewer" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_Tournament_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_Match_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_MatchTeam_Match" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_PlayerMatch_Match" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_MatchTeam_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_PlayerMatch_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_PlayerTeam_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_PlayerTeam_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_PlayerTeam_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_Tournament_PlayFormat" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_Tournament_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Gareev_Danil_EdikovichModel.FK_Tournament_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

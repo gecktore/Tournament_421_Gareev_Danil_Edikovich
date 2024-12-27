@@ -1,0 +1,52 @@
+﻿<Page x:Class="Tournament_421_Gareev_Danil_Edikovich.Pages.TornnamentListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_421_Gareev_Danil_Edikovich.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TornnamentListPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <StackPanel Margin="10">
+                <TextBlock Text="Вид:" FontWeight="Bold"/>
+                <ComboBox x:Name="TypeCb" Width="120" SelectionChanged="TypeCb_SelectionChanged" Margin="0,5,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <TextBlock Text="Поиск:" FontWeight="Bold"/>
+                <TextBox x:Name="SearchTb" Height="30" Width="120" TextChanged="SearchTb_TextChanged" Margin="0,5,0,0"/>
+            </StackPanel>
+        </StackPanel>
+
+        <ListView x:Name="TournamentLV" Grid.Row="1" Margin="20" Background="White" BorderThickness="1" BorderBrush="#CCCCCC">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Название" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Width="100" Header="Тип" DisplayMemberBinding="{Binding CompType.Title}"/>
+                    <GridViewColumn Width="100" Header="Размер" DisplayMemberBinding="{Binding DronType.Title}"/>
+                    <GridViewColumn Width="100" Header="Фото">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Height="60" Width="60" Source="{Binding ImageBin}" Stretch="Uniform"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="250" Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="20">
+            <Button x:Name="AddBt" Content="Добавить" Width="120" Height="40" FontSize="16" Click="AddBt_Click" Margin="0,10,10,0"/>
+            <Button x:Name="DelBt" Content="Удалить" Width="120" Height="40" FontSize="16" Background="Red" Foreground="White" Click="DelBt_Click" Margin="0,10,10,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

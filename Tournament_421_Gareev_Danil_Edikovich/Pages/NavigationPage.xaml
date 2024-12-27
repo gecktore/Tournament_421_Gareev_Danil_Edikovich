@@ -1,0 +1,21 @@
+﻿<Page x:Class="Tournament_421_Gareev_Danil_Edikovich.Pages.NavigationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_421_Gareev_Danil_Edikovich.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NavigationPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Margin="10" Height="100" Content="зона организаторов" x:Name="OrganizerBt"/>
+        <Button Margin="10" Height="100" Content="зона участников" x:Name="ViewerBt" Grid.Column="1"/>
+        <Button Margin="10" Height="100" Content="зона зрителей" x:Name="PlayerBt" Grid.Column="2"/>
+    </Grid>
+</Page>
