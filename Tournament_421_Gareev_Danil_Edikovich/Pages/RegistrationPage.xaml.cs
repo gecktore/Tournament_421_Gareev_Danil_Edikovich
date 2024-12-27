@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Tournament_421_Gareev_Danil_Edikovich.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для NavigationPage.xaml
+    /// Логика взаимодействия для RegistrationPage.xaml
     /// </summary>
-    public partial class NavigationPage : Page
+    public partial class RegistrationPage : Page
     {
-        public NavigationPage()
+        public RegistrationPage()
         {
             InitializeComponent();
-        }
-
-        private void RegBt_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

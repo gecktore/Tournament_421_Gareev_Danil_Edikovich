@@ -9,13 +9,15 @@
       Title="NavigationPage">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button Margin="10" Height="100" Content="зона организаторов" x:Name="OrganizerBt"/>
-        <Button Margin="10" Height="100" Content="зона участников" x:Name="ViewerBt" Grid.Column="1"/>
-        <Button Margin="10" Height="100" Content="зона зрителей" x:Name="PlayerBt" Grid.Column="2"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock FontSize="18">Авторизация</TextBlock>
+            <TextBlock>Логин</TextBlock>
+            <TextBox x:Name="LoginTb"/>
+            <TextBlock>Пароль</TextBlock>
+            <PasswordBox x:Name="PassPb"></PasswordBox>
+            <Button Margin="5" x:Name="EnterBt" Content="Войти" Click="EnterBt_Click"/>
+            <Button Margin="5" x:Name="RegBt" Content="Регистрация" Click="RegBt_Click"/>
+            <Button Margin="5" x:Name="ViewerBt" Content="Продоолжить как зритель" Click="RegBt_Click"/>
+        </StackPanel>
     </Grid>
 </Page>
